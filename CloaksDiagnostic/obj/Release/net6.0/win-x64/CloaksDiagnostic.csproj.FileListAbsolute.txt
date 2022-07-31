@@ -1,0 +1,15 @@
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\bin\Release\net6.0\win-x64\CloaksDiagnostic.exe
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\bin\Release\net6.0\win-x64\CloaksDiagnostic.deps.json
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\bin\Release\net6.0\win-x64\CloaksDiagnostic.runtimeconfig.json
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\bin\Release\net6.0\win-x64\CloaksDiagnostic.dll
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\bin\Release\net6.0\win-x64\CloaksDiagnostic.pdb
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\obj\Release\net6.0\win-x64\CloaksDiagnostic.csproj.AssemblyReference.cache
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\obj\Release\net6.0\win-x64\CloaksDiagnostic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\obj\Release\net6.0\win-x64\CloaksDiagnostic.AssemblyInfoInputs.cache
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\obj\Release\net6.0\win-x64\CloaksDiagnostic.AssemblyInfo.cs
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\obj\Release\net6.0\win-x64\CloaksDiagnostic.csproj.CoreCompileInputs.cache
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\obj\Release\net6.0\win-x64\CloaksDiagnostic.dll
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\obj\Release\net6.0\win-x64\refint\CloaksDiagnostic.dll
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\obj\Release\net6.0\win-x64\CloaksDiagnostic.pdb
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\obj\Release\net6.0\win-x64\CloaksDiagnostic.genruntimeconfig.cache
+C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\obj\Release\net6.0\win-x64\ref\CloaksDiagnostic.dll

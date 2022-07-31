@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "mp9wOcxge0aVq9pmKQHyL8wa13Q1PNLAiooZ9OpUnII0N6oJSmHwTQnHYfMVLJzh+udVvrDIvMYm0LzrDyvknw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\maxzl\\RiderProjects\\CloaksDiagnostic\\CloaksDiagnostic\\CloaksDiagnostic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\maxzl\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\6.0.7\\microsoft.netcore.app.crossgen2.win-x64.6.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}
