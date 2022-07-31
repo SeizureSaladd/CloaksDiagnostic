@@ -70,13 +70,13 @@ InProgress("Checking if a Cloaks+ cape exists for any Minecraft usernames found.
 
 var users = GetMinecraftUsers();
 
-if (users.Count == 0) Error("Unable to find any Minecraft accounts!");
+if (users == null) Error("Unable to find any Minecraft accounts!");
 
-for (var i = 0; i < GetMinecraftUsers().Count; i++)
+for (var i = 0; i < GetMinecraftUsers()?.Count; i++)
 {
-    InProgress($"Getting cape for {users[i]}...");
-    if (await CapeExists(users[i]))
-        Success($"A Cloaks+ cape was found for {users[i]}!");
+    InProgress($"Getting cape for {users?[i]}...");
+    if (await CapeExists(users?[i]))
+        Success($"A Cloaks+ cape was found for {users?[i]}!");
     else
     {
         Error($"A Cloaks+ cape could not be found for {users}. Make sure you've verified and registered a cape. This will not be added to the total error count.");
@@ -86,7 +86,6 @@ for (var i = 0; i < GetMinecraftUsers().Count; i++)
 Success($"Cloaks+ diagnostic completed. Press any key to exit. Total error count: {errorCount}/4");
 
 Console.ReadKey();
-
 
 async Task<bool> OptifineWorking()
 {
@@ -115,23 +114,17 @@ bool CloaksInstalled()
     }
 }
 
-List<string> GetMinecraftUsers()
+List<string>? GetMinecraftUsers()
 {
-    string[] launcherAccounts;
-    try
-    {
-        launcherAccounts = File.ReadAllLines($"{minecraftFolder}\\launcher_accounts.json");
-    }
-    catch (Exception e)
-    {
-        Error($"Error while trying to find Minecraft username: {e.Message}");
-        return new List<string>();
-    }
-
+    if (!File.Exists($"{minecraftFolder}\\launcher_accounts.json")) 
+        return null;
+    
+    var launcherAccounts = File.ReadAllLines($"{minecraftFolder}\\launcher_accounts.json");
+    
     return (from t in launcherAccounts where t.Contains("\"name\"") select t[18..].Replace("\"", "")).ToList();
 }
 
-async Task<bool> CapeExists(string username)
+async Task<bool> CapeExists(string? username)
 {
     using var client = new HttpClient();
     try

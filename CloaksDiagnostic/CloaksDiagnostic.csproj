@@ -6,9 +6,6 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <ApplicationIcon>C.ico</ApplicationIcon>
-        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-        <PublishSingleFile>true</PublishSingleFile>
-        <PublishReadyToRun>true</PublishReadyToRun>
     </PropertyGroup>
 
 </Project>
