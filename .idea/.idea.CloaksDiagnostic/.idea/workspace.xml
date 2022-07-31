@@ -8,7 +8,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5ce7b40-8b63-4186-94e8-c17bc123a765" name="Changes" comment="" />
+    <list default="true" id="c5ce7b40-8b63-4186-94e8-c17bc123a765" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CloaksDiagnostic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CloaksDiagnostic/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Debug/net6.0/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Debug/net6.0/CloaksDiagnostic.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Debug/net6.0/CloaksDiagnostic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Debug/net6.0/CloaksDiagnostic.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/CloaksDiagnostic.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/CloaksDiagnostic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/CloaksDiagnostic.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Debug/net6.0/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Debug/net6.0/CloaksDiagnostic.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Debug/net6.0/CloaksDiagnostic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Debug/net6.0/CloaksDiagnostic.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/CloaksDiagnostic.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/CloaksDiagnostic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/CloaksDiagnostic.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/ref/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/ref/CloaksDiagnostic.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/refint/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/refint/CloaksDiagnostic.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +31,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2CgBM78GmKk6DbsBoIpdAKvf58N" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -71,14 +85,26 @@
       <workItem from="1659229194311" duration="8680000" />
       <workItem from="1659277981872" duration="693000" />
       <workItem from="1659281210476" duration="5737000" />
-      <workItem from="1659288122161" duration="3406000" />
+      <workItem from="1659288122161" duration="4630000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

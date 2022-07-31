@@ -10,7 +10,7 @@ var hostsFile = Environment.OSVersion.Platform switch
 
 var minecraftFolder = Environment.OSVersion.Platform switch
 {
-    PlatformID.MacOSX or PlatformID.Unix => "/etc/hosts",
+    PlatformID.MacOSX or PlatformID.Unix => "/User/USER/Library/Application/.minecraft", // /home/USER/ for linucks
     PlatformID.Win32NT => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ".minecraft"),
     _ => ""
 };
@@ -26,6 +26,8 @@ Console.Write("Cloaks");
 Console.ForegroundColor = ConsoleColor.White;
 Console.WriteLine("+ diagnostic!\n");
 
+if (Directory.Exists(minecraftFolder.Replace(".minecraft", ".tlauncher"))) 
+    Error("Cloaks+ doesn't support cracked Minecraft and never will. Please use a premium account to use Cloaks+.");
 
 InProgress("Checking for hosts file problems...");
 if (HostsAvailable())
@@ -65,14 +67,19 @@ else
 }
 
 InProgress("Checking if a Cloaks+ cape exists for any Minecraft usernames found...");
+
+var users = GetMinecraftUsers();
+
+if (users.Count == 0) Error("Unable to find any Minecraft accounts!");
+
 for (var i = 0; i < GetMinecraftUsers().Count; i++)
 {
-    InProgress($"Getting cape for {GetMinecraftUsers()[i]}...");
-    if (await CapeExists(GetMinecraftUsers()[i]))
-        Success($"A Cloaks+ cape was found for {GetMinecraftUsers()[i]}!");
+    InProgress($"Getting cape for {users[i]}...");
+    if (await CapeExists(users[i]))
+        Success($"A Cloaks+ cape was found for {users[i]}! Make sure you have a Minecraft installation present and you aren't using cracked!");
     else
     {
-        Error($"A Cloaks+ cape could not be found for {GetMinecraftUsers()[i]}. Make sure you've verified and registered a cape. This will not be added to the total error count.");
+        Error($"A Cloaks+ cape could not be found for {users}. Make sure you've verified and registered a cape. This will not be added to the total error count.");
     }
 }
 
