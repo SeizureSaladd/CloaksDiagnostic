@@ -8,19 +8,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5ce7b40-8b63-4186-94e8-c17bc123a765" name="Changes" comment="">
+    <list default="true" id="c5ce7b40-8b63-4186-94e8-c17bc123a765" name="Changes" comment="Added tlauncher checker and stuff">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CloaksDiagnostic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CloaksDiagnostic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Debug/net6.0/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Debug/net6.0/CloaksDiagnostic.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Debug/net6.0/CloaksDiagnostic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Debug/net6.0/CloaksDiagnostic.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/CloaksDiagnostic.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/CloaksDiagnostic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/CloaksDiagnostic.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Debug/net6.0/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Debug/net6.0/CloaksDiagnostic.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Debug/net6.0/CloaksDiagnostic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Debug/net6.0/CloaksDiagnostic.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/CloaksDiagnostic.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/CloaksDiagnostic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/CloaksDiagnostic.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/ref/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/ref/CloaksDiagnostic.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/refint/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/refint/CloaksDiagnostic.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/CloaksDiagnostic.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/CloaksDiagnostic.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/win-x64/CloaksDiagnostic.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/win-x64/CloaksDiagnostic.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/win-x64/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/win-x64/CloaksDiagnostic.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/win-x64/CloaksDiagnostic.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/win-x64/CloaksDiagnostic.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/win-x64/CloaksDiagnostic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/win-x64/CloaksDiagnostic.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/win-x64/CloaksDiagnostic.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/bin/Release/net6.0/win-x64/CloaksDiagnostic.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/CloaksDiagnostic.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/CloaksDiagnostic.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/CloaksDiagnostic.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/CloaksDiagnostic.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/CloaksDiagnostic.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/CloaksDiagnostic.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/CloaksDiagnostic.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/CloaksDiagnostic.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/CloaksDiagnostic.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/CloaksDiagnostic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/CloaksDiagnostic.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/ref/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/ref/CloaksDiagnostic.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/refint/CloaksDiagnostic.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/Release/net6.0/win-x64/refint/CloaksDiagnostic.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloaksDiagnostic/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/CloaksDiagnostic/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +92,16 @@
       <workItem from="1659229194311" duration="8680000" />
       <workItem from="1659277981872" duration="693000" />
       <workItem from="1659281210476" duration="5737000" />
-      <workItem from="1659288122161" duration="4630000" />
+      <workItem from="1659288122161" duration="5358000" />
     </task>
+    <task id="LOCAL-00001" summary="Added tlauncher checker and stuff">
+      <created>1659293076964</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659293076964</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,5 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Added tlauncher checker and stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tlauncher checker and stuff" />
   </component>
 </project>

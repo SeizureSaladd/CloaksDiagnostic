@@ -76,7 +76,7 @@ for (var i = 0; i < GetMinecraftUsers().Count; i++)
 {
     InProgress($"Getting cape for {users[i]}...");
     if (await CapeExists(users[i]))
-        Success($"A Cloaks+ cape was found for {users[i]}! Make sure you have a Minecraft installation present and you aren't using cracked!");
+        Success($"A Cloaks+ cape was found for {users[i]}!");
     else
     {
         Error($"A Cloaks+ cape could not be found for {users}. Make sure you've verified and registered a cape. This will not be added to the total error count.");

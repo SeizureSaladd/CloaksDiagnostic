@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mp9wOcxge0aVq9pmKQHyL8wa13Q1PNLAiooZ9OpUnII0N6oJSmHwTQnHYfMVLJzh+udVvrDIvMYm0LzrDyvknw==",
+  "dgSpecHash": "UBsKtAWt+Nb9JWkpQCp9QiGdxi6lul2OE1jduUBi1RD+8rP/rqQrldLop2s1Q9nSJ1to9xU7NhgjFEYKgCmU3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\maxzl\\RiderProjects\\CloaksDiagnostic\\CloaksDiagnostic\\CloaksDiagnostic.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\maxzl\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.7\\microsoft.netcore.app.runtime.win-x64.6.0.7.nupkg.sha512",
+    "C:\\Users\\maxzl\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.7\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.7.nupkg.sha512",
+    "C:\\Users\\maxzl\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.7\\microsoft.aspnetcore.app.runtime.win-x64.6.0.7.nupkg.sha512",
     "C:\\Users\\maxzl\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\6.0.7\\microsoft.netcore.app.crossgen2.win-x64.6.0.7.nupkg.sha512"
   ],
   "logs": []
