@@ -1,2 +1,0 @@
-C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\bin\Release\net6.0\publish\win-x64\CloaksDiagnostic.pdb
-C:\Users\maxzl\RiderProjects\CloaksDiagnostic\CloaksDiagnostic\bin\Release\net6.0\publish\win-x64\CloaksDiagnostic.exe
