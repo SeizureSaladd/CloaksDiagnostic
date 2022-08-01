@@ -25,7 +25,7 @@ var hostsFile = OperatingSystem.IsMacOS() || OperatingSystem.IsLinux()
 var minecraftFolder = OperatingSystem.IsMacOS()
     ? $"/Users/{Environment.UserName}/Library/Application Support/minecraft"
     : OperatingSystem.IsWindows()
-        ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "drivers/etc/hosts")
+        ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ".minecraft")
         : OperatingSystem.IsLinux()
             ? $"/home/{Environment.UserName}/.minecraft"
             : "";
