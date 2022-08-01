@@ -1,21 +1,38 @@
 ﻿using System.Diagnostics;
 using System.Security;
 
-var hostsFile = Environment.OSVersion.Platform switch
-{
-    PlatformID.MacOSX or PlatformID.Unix => "/etc/hosts",
-    PlatformID.Win32NT => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "drivers/etc/hosts"),
-    _ => ""
-};
+// unused due to unreliable behavior; PlatformID.Unix is returned on macOS.
+// var hostsFile = Environment.OSVersion.Platform switch
+// {
+//     PlatformID.MacOSX or PlatformID.Unix => "/etc/hosts",
+//     PlatformID.Win32NT => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "drivers/etc/hosts"),
+//     _ => ""
+// };
+//
+// var minecraftFolder = Environment.OSVersion.Platform switch
+// {
+//     PlatformID.MacOSX or PlatformID.Unix => $"/User/{Environment.UserName}/Library/Application/.minecraft", // /home/USER/ for linucks
+//     PlatformID.Win32NT => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ".minecraft"),
+//     _ => ""
+// };
 
-var minecraftFolder = Environment.OSVersion.Platform switch
-{
-    PlatformID.MacOSX or PlatformID.Unix => "/User/USER/Library/Application/.minecraft", // /home/USER/ for linucks
-    PlatformID.Win32NT => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ".minecraft"),
-    _ => ""
-};
+var hostsFile = OperatingSystem.IsMacOS() || OperatingSystem.IsLinux()
+    ? "/etc/hosts"
+    : OperatingSystem.IsWindows()
+        ? System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "drivers/etc/hosts")
+        : "";
+
+var minecraftFolder = OperatingSystem.IsMacOS()
+    ? $"/Users/{Environment.UserName}/Library/Application Support/minecraft"
+    : OperatingSystem.IsWindows()
+        ? System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "drivers/etc/hosts")
+        : OperatingSystem.IsLinux()
+            ? $"/home/{Environment.UserName}/.minecraft"
+            : "";
 
 var errorCount = 0;
+
+Console.Clear(); //for macOS
 
 Console.Title = "Cloaks+ Diagnostic - Created by seizure salad#3820";
 
@@ -26,8 +43,8 @@ Console.Write("Cloaks");
 Console.ForegroundColor = ConsoleColor.White;
 Console.WriteLine("+ diagnostic!\n");
 
-if (Directory.Exists(minecraftFolder.Replace(".minecraft", ".tlauncher"))) 
-    Error("Cloaks+ doesn't support cracked Minecraft and never will. Please use a premium account to use Cloaks+.");
+if (Directory.Exists(minecraftFolder.Replace("minecraft", "tlauncher"))) 
+    Error("Cloaks+ doesn't support cracked Minecraft and never will. Please use a premium account in order to use Cloaks+.");
 
 InProgress("Checking for hosts file problems...");
 if (HostsAvailable())
@@ -79,7 +96,7 @@ for (var i = 0; i < GetMinecraftUsers()?.Count; i++)
         Success($"A Cloaks+ cape was found for {users?[i]}!");
     else
     {
-        Error($"A Cloaks+ cape could not be found for {users}. Make sure you've verified and registered a cape. This will not be added to the total error count.");
+        Error($"A Cloaks+ cape could not be found for {users?[i]}. Make sure you've verified and registered a cape. This will not be added to the total error count.");
     }
 }
 
@@ -116,10 +133,10 @@ bool CloaksInstalled()
 
 List<string>? GetMinecraftUsers()
 {
-    if (!File.Exists($"{minecraftFolder}\\launcher_accounts.json")) 
+    if (!File.Exists($"{minecraftFolder}/launcher_accounts.json")) 
         return null;
     
-    var launcherAccounts = File.ReadAllLines($"{minecraftFolder}\\launcher_accounts.json");
+    var launcherAccounts = File.ReadAllLines($"{minecraftFolder}/launcher_accounts.json");
     
     return (from t in launcherAccounts where t.Contains("\"name\"") select t[18..].Replace("\"", "")).ToList();
 }
@@ -177,7 +194,7 @@ bool HostsAvailable()
 
 bool OptifineInstalled()
 {
-    return File.Exists($"{minecraftFolder}\\optionsof.txt");
+    return File.Exists($"{minecraftFolder}/optionsof.txt");
 }
 
 void InProgress(string message)
