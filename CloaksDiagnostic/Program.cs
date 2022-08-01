@@ -83,6 +83,25 @@ else
     Process.Start(new ProcessStartInfo("https://optifine.net") { UseShellExecute = true});
 }
 
+InProgress("Checking if vanilla capes are enabled...");
+if (VanillaCapesEnabled())
+    Success("Vanilla capes are enabled!");
+else
+{
+    errorCount += 1;
+    Error("Capes are not enabled in vanilla settings. You can enable them in Skin Customization... -> Cape.");
+}
+
+InProgress("Checking if Optifine capes are enabled...");
+if (OptifineCapesEnabled())
+    Success("Optifine capes are enabled!");
+else
+{
+    errorCount += 1;
+    Error("Capes are not enabled in Optifine settings. You can enable them in Video Settings... -> Details... -> Show Capes.");
+}
+
+
 InProgress("Checking if a Cloaks+ cape exists for any Minecraft usernames found...");
 
 var users = GetMinecraftUsers();
@@ -100,7 +119,7 @@ for (var i = 0; i < GetMinecraftUsers()?.Count; i++)
     }
 }
 
-Success($"Cloaks+ diagnostic completed. Press any key to exit. Total error count: {errorCount}/4");
+Success($"Cloaks+ diagnostic completed. Press any key to exit. Total error count: {errorCount}/6");
 
 Console.ReadKey();
 
@@ -135,10 +154,27 @@ List<string>? GetMinecraftUsers()
 {
     if (!File.Exists($"{minecraftFolder}/launcher_accounts.json")) 
         return null;
-    
+
     var launcherAccounts = File.ReadAllLines($"{minecraftFolder}/launcher_accounts.json");
-    
     return (from t in launcherAccounts where t.Contains("\"name\"") select t[18..].Replace("\"", "")).ToList();
+}
+
+bool VanillaCapesEnabled()
+{
+    if (!File.Exists($"{minecraftFolder}/options.txt"))
+        return false;
+
+    var options = File.ReadAllLines($"{minecraftFolder}/options.txt");
+    return (from t in options where t.StartsWith("modelPart_cape") select t == "modelPart_cape:true").FirstOrDefault();
+}
+
+bool OptifineCapesEnabled()
+{
+    if (!OptifineInstalled())
+        return false;
+
+    var options = File.ReadAllLines($"{minecraftFolder}/optionsof.txt");
+    return (from t in options where t.StartsWith("ofShowCapes") select t == "ofShowCapes:true").FirstOrDefault();
 }
 
 async Task<bool> CapeExists(string? username)
