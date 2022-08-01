@@ -158,7 +158,7 @@ List<string>? GetMinecraftUsers()
     if (!File.Exists(Path.Combine(minecraftFolder, "launcher_accounts.json"))) 
         return null;
 
-    var launcherAccounts = File.ReadAllLines(Path.Combine(minecraftFolder, "launcher_accounts.json")));
+    var launcherAccounts = File.ReadAllLines(Path.Combine(minecraftFolder, "launcher_accounts.json"));
     return (from t in launcherAccounts where t.Contains("\"name\"") select t[18..].Replace("\"", "")).ToList();
 }
 
@@ -167,7 +167,7 @@ bool VanillaCapesEnabled()
     if (!File.Exists(Path.Combine(minecraftFolder, "options.txt")))
         return false;
 
-    var options = File.ReadAllLines(Path.Combine(minecraftFolder, "options.txt")));
+    var options = File.ReadAllLines(Path.Combine(minecraftFolder, "options.txt"));
     return (from t in options where t.StartsWith("modelPart_cape") select t == "modelPart_cape:true").FirstOrDefault();
 }
 
@@ -176,7 +176,7 @@ bool OptifineCapesEnabled()
     if (!OptifineInstalled())
         return false;
 
-    var options = File.ReadAllLines(Path.Combine(minecraftFolder, "optionsof.txt")));
+    var options = File.ReadAllLines(Path.Combine(minecraftFolder, "optionsof.txt"));
     return (from t in options where t.StartsWith("ofShowCapes") select t == "ofShowCapes:true").FirstOrDefault();
 }
 
@@ -233,7 +233,7 @@ bool HostsAvailable()
 
 bool OptifineInstalled()
 {
-    return File.Exists(Path.Combine(minecraftFolder, "optionsof.txt")));
+    return File.Exists(Path.Combine(minecraftFolder, "optionsof.txt"));
 }
 
 void InProgress(string message)
