@@ -37,11 +37,11 @@ Console.Clear(); //for macOS
 Console.Title = "Cloaks+ Diagnostic - Created by seizure salad#3820";
 
 Console.ForegroundColor = ConsoleColor.White;
-Console.Write("Welcome to the unofficial ");
+SmoothWrite("Welcome to the unofficial ");
 Console.ForegroundColor = ConsoleColor.Blue;
-Console.Write("Cloaks");
+SmoothWrite("Cloaks");
 Console.ForegroundColor = ConsoleColor.White;
-Console.WriteLine("+ diagnostic!\n");
+SmoothWriteLine("+ diagnostic!\n");
 
 if (Directory.Exists(minecraftFolder.Replace("minecraft", "tlauncher"))) 
     Error("Cloaks+ doesn't support cracked Minecraft and never will. Please use a premium account in order to use Cloaks+.");
@@ -236,29 +236,47 @@ bool OptifineInstalled()
 void InProgress(string message)
 {
     Console.ForegroundColor = ConsoleColor.White;
-    Console.Write("[");
+    SmoothWrite("[");
     Console.ForegroundColor = ConsoleColor.Blue;
-    Console.Write("-");
+    SmoothWrite("-");
     Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine($"] {message}");
+    SmoothWriteLine($"] {message}");
 }
 
 void Error(string message)
 {
     Console.ForegroundColor = ConsoleColor.White;
-    Console.Write("[");
+    SmoothWrite("[");
     Console.ForegroundColor = ConsoleColor.Red;
-    Console.Write("X");
+    SmoothWrite("X");
     Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine($"] {message}");
+    SmoothWriteLine($"] {message}");
 }
 
 void Success(string message)
 {
     Console.ForegroundColor = ConsoleColor.White;
-    Console.Write("[");
+    SmoothWrite("[");
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.Write("✓");
+    SmoothWrite("✓");
     Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine($"] {message}");
+    SmoothWriteLine($"] {message}");
+}
+
+void SmoothWriteLine(string text)
+{
+    foreach (char ch in text + "\n")
+    {
+        Thread.Sleep(20);
+        Console.Write(ch);
+    }
+}
+
+void SmoothWrite(string text)
+{
+    foreach (char ch in text)
+    {
+        Thread.Sleep(20);
+        Console.Write(ch);
+    }
 }
