@@ -123,6 +123,9 @@ Success($"Cloaks+ diagnostic completed. Press any key to exit. Total error count
 
 Console.ReadKey();
 
+//************************************************************************
+// Code should be self explanatory enough
+
 async Task<bool> OptifineWorking()
 {
     using var client = new HttpClient();
