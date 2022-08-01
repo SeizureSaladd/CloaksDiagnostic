@@ -19,13 +19,13 @@ using System.Security;
 var hostsFile = OperatingSystem.IsMacOS() || OperatingSystem.IsLinux()
     ? "/etc/hosts"
     : OperatingSystem.IsWindows()
-        ? System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "drivers/etc/hosts")
+        ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "drivers/etc/hosts")
         : "";
 
 var minecraftFolder = OperatingSystem.IsMacOS()
     ? $"/Users/{Environment.UserName}/Library/Application Support/minecraft"
     : OperatingSystem.IsWindows()
-        ? System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "drivers/etc/hosts")
+        ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "drivers/etc/hosts")
         : OperatingSystem.IsLinux()
             ? $"/home/{Environment.UserName}/.minecraft"
             : "";
@@ -155,19 +155,19 @@ bool CloaksInstalled()
 
 List<string>? GetMinecraftUsers()
 {
-    if (!File.Exists($"{minecraftFolder}/launcher_accounts.json")) 
+    if (!File.Exists(Path.Combine(minecraftFolder, "launcher_accounts.json"))) 
         return null;
 
-    var launcherAccounts = File.ReadAllLines($"{minecraftFolder}/launcher_accounts.json");
+    var launcherAccounts = File.ReadAllLines(Path.Combine(minecraftFolder, "launcher_accounts.json")));
     return (from t in launcherAccounts where t.Contains("\"name\"") select t[18..].Replace("\"", "")).ToList();
 }
 
 bool VanillaCapesEnabled()
 {
-    if (!File.Exists($"{minecraftFolder}/options.txt"))
+    if (!File.Exists(Path.Combine(minecraftFolder, "options.txt")))
         return false;
 
-    var options = File.ReadAllLines($"{minecraftFolder}/options.txt");
+    var options = File.ReadAllLines(Path.Combine(minecraftFolder, "options.txt")));
     return (from t in options where t.StartsWith("modelPart_cape") select t == "modelPart_cape:true").FirstOrDefault();
 }
 
@@ -176,7 +176,7 @@ bool OptifineCapesEnabled()
     if (!OptifineInstalled())
         return false;
 
-    var options = File.ReadAllLines($"{minecraftFolder}/optionsof.txt");
+    var options = File.ReadAllLines(Path.Combine(minecraftFolder, "optionsof.txt")));
     return (from t in options where t.StartsWith("ofShowCapes") select t == "ofShowCapes:true").FirstOrDefault();
 }
 
@@ -233,7 +233,7 @@ bool HostsAvailable()
 
 bool OptifineInstalled()
 {
-    return File.Exists($"{minecraftFolder}/optionsof.txt");
+    return File.Exists(Path.Combine(minecraftFolder, "optionsof.txt")));
 }
 
 void InProgress(string message)
